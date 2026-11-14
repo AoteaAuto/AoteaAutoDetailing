@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aotea Auto Detailing | Dura-Seal Certified Care Centre, Porirua</title>
 <meta name="description" content="Premium auto detailing and Dura-Seal Certified Care Centre in Aotea, Porirua. Retail and wholesale Dura-Seal products in store.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -78,6 +82,23 @@ h2{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:800;letter-spacing:-.02em;li
 .service h3{font-size:1.1rem;margin-bottom:6px}
 .service p{color:var(--muted);font-size:.93rem}
 
+/* pricing */
+.pricing-head{margin:58px 0 28px}
+.pricing-head h3{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
+.pricing-head p{color:var(--muted);max-width:62ch;margin:0 auto}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.plan{padding:28px 26px;display:flex;flex-direction:column}
+.plan .tag{position:static;align-self:flex-start;margin-bottom:16px;color:var(--a)}
+.plan h4{font-size:1.15rem;font-weight:700;margin-bottom:4px}
+.plan .for{color:var(--muted);font-size:.9rem;min-height:2.9em}
+.plan .amt{font-size:2.3rem;font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-top:18px}
+.plan .gst{color:var(--muted);font-size:.85rem;font-weight:500;margin-bottom:18px}
+.plan ul{list-style:none;padding:0;margin:0 0 22px;border-top:1px solid var(--line)}
+.plan li{position:relative;padding:9px 0 9px 26px;color:var(--muted);font-size:.9rem;border-bottom:1px solid var(--line)}
+.plan li::before{content:"\2713";position:absolute;left:0;color:var(--a);font-weight:800}
+.plan .btn{margin-top:auto;justify-content:center}
+.pricing-note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:22px}
+
 /* filters + products */
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
 .chip{font:inherit;font-weight:600;font-size:.9rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:99px;padding:8px 18px;cursor:pointer;transition:.2s}
@@ -133,6 +154,32 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .modal{position:fixed;inset:0;z-index:50;background:rgba(2,5,10,.8);backdrop-filter:blur(8px);display:none;place-items:center;padding:20px}
 .modal.open{display:grid}
 .sheet{width:min(560px,100%);border-radius:20px;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:1px solid transparent;overflow:hidden;animation:pop .25s ease}
+/* contact popup */
+#contactModal .sheet{width:min(480px,100%);max-height:calc(100vh - 40px);overflow-y:auto}
+#contactModal .in{padding:30px 26px 26px}
+#contactModal h3{padding-right:40px}
+#contactModal .sub{margin-bottom:10px}
+.clist .row:last-of-type{border-bottom:0}
+.clist .row>div:last-child{min-width:0}
+.clist .val{display:block;font-weight:700;font-size:1.05rem;word-break:break-word}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.acts a,.acts button{font:inherit;font-weight:600;font-size:.82rem;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:99px;padding:5px 14px;cursor:pointer;text-decoration:none;transition:.2s}
+.acts a:hover,.acts button:hover{color:#03111a;background:var(--grad);border-color:transparent}
+
+/* booklet */
+.booklet{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px;align-items:center;padding:42px}
+.booklet h2{font-size:clamp(1.7rem,3.8vw,2.4rem)}
+.booklet p{color:var(--muted);margin-bottom:22px;max-width:52ch}
+.booklet .btns{display:flex;gap:12px;flex-wrap:wrap}
+.cover{justify-self:center;width:min(250px,100%);aspect-ratio:3/4;border-radius:10px 18px 18px 10px;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(160deg,#0d2230,#05111c) padding-box,var(--grad) border-box;border:1px solid transparent;box-shadow:-8px 10px 40px -10px rgba(2,161,249,.45),inset 8px 0 14px -8px rgba(0,0,0,.6);
+  transform:perspective(900px) rotateY(-14deg);transition:transform .4s,box-shadow .4s;cursor:pointer;font:inherit;color:inherit;text-align:left;text-decoration:none}
+.cover:hover,.booklet:hover .cover{transform:perspective(900px) rotateY(-4deg) translateY(-6px);box-shadow:-8px 16px 50px -8px rgba(0,204,209,.6),inset 8px 0 14px -8px rgba(0,0,0,.6)}
+.cover .brand-s{font-size:.8rem;font-weight:700;letter-spacing:.18em;color:var(--a)}
+.cover b{font-size:1.9rem;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.cover small{color:var(--muted);font-size:.8rem}
+@media(max-width:800px){.booklet{padding:28px 22px}}
+
 @keyframes pop{from{transform:scale(.95);opacity:0}to{transform:none;opacity:1}}
 .sheet .ph{aspect-ratio:16/10}
 .sheet .in{padding:22px 26px 28px}
@@ -165,10 +212,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
     <nav aria-label="Main">
       <ul id="menu">
         <li><a class="link" href="#services">Services</a></li>
+        <li><a class="link" href="#booklet">Booklet</a></li>
         <li><a class="link" href="#products">Products</a></li>
         <li><a class="link" href="#faq">FAQ</a></li>
         <li><a class="link" href="#contact">Find us</a></li>
-        <li><a class="btn sm" href="tel:042370051">Call us</a></li>
+        <li><a class="btn sm" href="tel:042370051" data-contact>Call us</a></li>
       </ul>
     </nav>
   </div>
@@ -203,6 +251,86 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
         <div class="card service rv"><div class="ico">🔧</div><h3>Paint correction</h3><p>Remove swirls and light scratches to bring back depth and gloss.</p></div>
         <div class="card service rv"><div class="ico">🛋️</div><h3>Upholstery deep clean</h3><p>Lift dirt and stains from seats, carpets and trim.</p></div>
         <div class="card service rv"><div class="ico">🛡️</div><h3>Dura-Seal protection</h3><p>Ceramic paint, leather, fabric and carpet protection applied by certified staff.</p></div>
+      </div>
+
+      <div class="center pricing-head rv">
+        <h3>Dura-Seal <span class="grad-text">protection pricing</span></h3>
+        <p>Lock in that showroom finish. Our certified team prepares and seals your vehicle with Dura-Seal so it stays glossy, easier to clean and protected from the elements. Pick the size that suits you.</p>
+      </div>
+      <div class="pricing">
+        <div class="card plan rv">
+          <span class="tag">Small</span>
+          <h4>Small vehicle</h4>
+          <p class="for">Hatchbacks, city cars and compact vehicles.</p>
+          <div class="amt grad-text">$795</div>
+          <div class="gst">+ GST</div>
+          <ul>
+            <li>Applied by Dura-Seal certified staff</li>
+            <li>Long-lasting protection for paint, trim and glass</li>
+            <li>Full prep and cleanse before application</li>
+          </ul>
+          <a class="btn ghost sm" href="#contact">Book or enquire</a>
+        </div>
+        <div class="card plan rv">
+          <span class="tag">Medium</span>
+          <h4>Medium vehicle</h4>
+          <p class="for">Sedans, wagons and mid-size SUVs.</p>
+          <div class="amt grad-text">$995</div>
+          <div class="gst">+ GST</div>
+          <ul>
+            <li>Applied by Dura-Seal certified staff</li>
+            <li>Long-lasting protection for paint, trim and glass</li>
+            <li>Full prep and cleanse before application</li>
+          </ul>
+          <a class="btn ghost sm" href="#contact">Book or enquire</a>
+        </div>
+        <div class="card plan rv">
+          <span class="tag">Large</span>
+          <h4>Large vehicle</h4>
+          <p class="for">Large SUVs, utes and people movers.</p>
+          <div class="amt grad-text">$1,295</div>
+          <div class="gst">+ GST</div>
+          <ul>
+            <li>Applied by Dura-Seal certified staff</li>
+            <li>Long-lasting protection for paint, trim and glass</li>
+            <li>Full prep and cleanse before application</li>
+          </ul>
+          <a class="btn ghost sm" href="#contact">Book or enquire</a>
+        </div>
+        <div class="card plan rv">
+          <span class="tag">RV</span>
+          <h4>Caravans and RVs</h4>
+          <p class="for">Caravans, motorhomes and recreational vehicles.</p>
+          <div class="amt grad-text">$2,995</div>
+          <div class="gst">+ GST</div>
+          <ul>
+            <li>Applied by Dura-Seal certified staff</li>
+            <li>Long-lasting protection for paint, trim and glass</li>
+            <li>Full prep and cleanse before application</li>
+            <li>Specialist treatment for large surface areas</li>
+          </ul>
+          <a class="btn ghost sm" href="#contact">Book or enquire</a>
+        </div>
+      </div>
+      <p class="pricing-note rv">All prices exclude GST. Final quote depends on vehicle size and condition. Call us on <a href="tel:042370051" style="color:var(--a)">04 237 0051</a> to confirm.</p>
+    </div>
+  </section>
+
+  <section id="booklet">
+    <div class="wrap">
+      <div class="card booklet rv">
+        <div>
+          <h2>Dura-Seal <span class="grad-text">explained</span></h2>
+          <p>New to Dura-Seal? Flip through the official booklet to see what the protection is, how it works and what it can do for your vehicle. Have questions afterwards? Pop in or give us a call.</p>
+          <div class="btns">
+            <a class="btn" href="https://durasealprotection.co.nz/flipbook/index.html" target="_blank" rel="noopener">Read the booklet ↗</a>
+          </div>
+        </div>
+        <a class="cover" href="https://durasealprotection.co.nz/flipbook/index.html" target="_blank" rel="noopener" aria-label="Open the Dura-Seal booklet in a new tab">
+          <span class="brand-s">DURA-SEAL</span>
+          <b>Dura-Seal<br><span class="grad-text">Explained</span></b>
+          <small>Tap to flip through the booklet</small>
+        </a>
       </div>
     </div>
   </section>
@@ -260,7 +388,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
       <div class="note rv">
         <div><b>Wholesale enquiries</b><br><span style="color:var(--muted)">Buying in bulk or for a business? Wholesale pricing is available on Dura-Seal products.</span></div>
-        <a class="btn sm" href="tel:042370051">Call 04 237 0051</a>
+        <a class="btn sm" href="tel:042370051" data-contact data-subject="Wholesale enquiry">Call 04 237 0051</a>
       </div>
     </div>
   </section>
@@ -309,7 +437,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
     <div class="ph" id="mPh"></div>
     <div class="in">
       <h3 id="mTitle"></h3><div class="mprice grad-text" id="mPrice"></div><p id="mDesc"></p>
-      <a class="btn sm" href="tel:042370051">Ask about this product</a>
+      <a class="btn sm" id="askBtn" href="tel:042370051" data-contact>Ask about this product</a>
+    </div>
+  </div>
+</div>
+<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="cTitle">
+  <div class="sheet">
+    <button class="x" id="cClose" aria-label="Close">×</button>
+    <div class="in">
+      <h3 id="cTitle">Get in touch</h3>
+      <p class="sub" id="cSub">Call, text or email us. We're happy to help.</p>
+      <div class="clist">
+        <div class="row"><div class="ico">📞</div><div><small>Shop phone</small><span class="val">04 237 0051</span>
+          <div class="acts"><a href="tel:042370051">Call</a><button type="button" data-copy="04 237 0051">Copy</button></div></div></div>
+        <div class="row"><div class="ico">📱</div><div><small>Owner &middot; Call or text</small><span class="val">022 599 8836</span>
+          <div class="acts"><a href="tel:0225998836">Call</a><a href="sms:0225998836">Text</a><button type="button" data-copy="022 599 8836">Copy</button></div></div></div>
+        <div class="row"><div class="ico">✉️</div><div><small>Email</small><span class="val">aoteaauto@outlook.co.nz</span>
+          <div class="acts"><a id="cMail" href="mailto:aoteaauto@outlook.co.nz">Send email</a><button type="button" data-copy="aoteaauto@outlook.co.nz">Copy</button></div></div></div>
+        <div class="row"><div class="ico">📍</div><div><small>Visit us &middot; Opens 8:30 am</small><span class="val">4 Te Puia Drive, Aotea, Porirua 5024</span>
+          <div class="acts"><a target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=4+Te+Puia+Drive+Aotea+Porirua+5024">Get directions</a></div></div></div>
+      </div>
     </div>
   </div>
 </div>
@@ -337,6 +484,7 @@ const modal=document.getElementById('modal'),mPh=document.getElementById('mPh');
 prods.forEach(p=>p.onclick=()=>{
   mPh.innerHTML=p.querySelector('.ph').innerHTML.replace(/<span class="tag">.*?<\/span>/,'');
   document.getElementById('mTitle').textContent=p.dataset.name+' ('+p.dataset.size+')';
+  document.getElementById('askBtn').dataset.subject='Enquiry about '+p.dataset.name+' ('+p.dataset.size+')';
   document.getElementById('mPrice').textContent=p.dataset.price;
   document.getElementById('mDesc').textContent=p.dataset.desc;
   modal.classList.add('open');document.getElementById('mClose').focus();
@@ -344,15 +492,30 @@ prods.forEach(p=>p.onclick=()=>{
 const close=()=>modal.classList.remove('open');
 document.getElementById('mClose').onclick=close;
 modal.onclick=e=>{if(e.target===modal)close()};
-addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+addEventListener('keydown',e=>{if(e.key==='Escape'){close();closeContact()}});
 
-// copy phone
-document.getElementById('copyPhone').onclick=e=>{
-  e.preventDefault();
-  const t=document.getElementById('toast');
-  (navigator.clipboard?navigator.clipboard.writeText('04 237 0051'):Promise.reject()).catch(()=>{}).finally(()=>{
-    t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)});
-};
+// toast + copy
+const toast=document.getElementById('toast');
+function showToast(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}
+function copyText(t,msg){
+  (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).catch(()=>{}).finally(()=>showToast(msg))
+}
+document.getElementById('copyPhone').onclick=e=>{e.preventDefault();copyText('04 237 0051','Number copied')};
+document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>copyText(b.dataset.copy,b.dataset.copy.includes('@')?'Email copied':'Number copied'));
+
+// contact popup
+const cModal=document.getElementById('contactModal'),cSub=document.getElementById('cSub'),cMail=document.getElementById('cMail');
+const defSub=cSub.textContent;
+function openContact(subject){
+  cSub.textContent=subject?subject+'. Get in touch and we\'ll get back to you.':defSub;
+  cMail.href='mailto:aoteaauto@outlook.co.nz'+(subject?'?subject='+encodeURIComponent(subject):'');
+  modal.classList.remove('open');
+  cModal.classList.add('open');document.getElementById('cClose').focus();
+}
+function closeContact(){cModal.classList.remove('open')}
+document.querySelectorAll('[data-contact]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openContact(a.dataset.subject||'')}));
+document.getElementById('cClose').onclick=closeContact;
+cModal.onclick=e=>{if(e.target===cModal)closeContact()};
 
 // scroll reveal + active nav
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
